@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="5dp"
+    android:layout_height="293dp">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@tools:sample/backgrounds/scenic"  />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9A535252">
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:maxLines="2"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/news_excerpt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:layout_below="@id/news_title"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:layout_alignParentStart="true"
+            android:text="@string/app_desc"/>
+
+        <TextView
+            android:id="@+id/news_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_2023_05_01"
+            android:drawablePadding="8dp"
+            android:padding="5dp"
+            android:textColor="@android:color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            app:drawableTint="@color/white"
+            app:drawableStartCompat="@drawable/baseline_date_range_24" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

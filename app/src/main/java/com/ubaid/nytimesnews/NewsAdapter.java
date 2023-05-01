@@ -42,7 +42,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.news_items, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.news_items_grid, parent, false);
         return new ViewHolder(view);
 
     }
@@ -66,7 +66,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        if (results.size() > 0){
+        if (model !=null && results.size() > 0){
             return results.size();
         }else{
             return 0;
