@@ -13,7 +13,7 @@ Before running the app, make sure you have the following:
 ## Getting Started
 1. Clone the repository to your local machine using:
 ```javascript
-git clone https://github.com/<username>/nytimes-most-popular-articles.git
+git clone https://github.com/ubedthaheem/nytimes-most-popular-articles.git
 ```
 2. Open Android Studio and select "Open an existing Android Studio project" from the main menu. Browse to the cloned repository directory and select the nytimes-most-popular-articles directory.
 
