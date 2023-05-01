@@ -56,7 +56,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
             holder.except.setText(results.get(position).getAbstract());
         }
 
-        String url = results.get(position).getMedia().get(0).getMediaMetadata().get(0).getUrl();
+        String url = results.get(position).getMedia().get(0).getMediaMetadata().get(2).getUrl();
 
             Glide.with(context)
                 .load(url)

@@ -10,6 +10,7 @@ import com.ubaid.nytimesnews.models.ModelNews;
 import com.ubaid.nytimesnews.models.Result;
 import com.ubaid.nytimesnews.services.NewsApi;
 import com.ubaid.nytimesnews.services.Service;
+import com.ubaid.nytimesnews.utils.Credentials;
 
 import java.util.ArrayList;
 import retrofit2.Call;
@@ -30,15 +31,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-/*
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("")
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-*/
         NewsApi newsApi = new Service().getNewsApi();
 
-        Call<ModelNews> newsCall = newsApi.getData();
+        Call<ModelNews> newsCall = newsApi.getData(Credentials.API_KEY);
 
 
         newsCall.enqueue(new Callback<ModelNews>() {
@@ -60,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }else{
                     // show toast &
-                    binding.messageTv.setText("Fetched the data..." +response.code() );
+                    binding.messageTv.setText("Failed to load data \n" +response.code() );
                     binding.progressBar.setVisibility(View.GONE);
                     binding.messageTv.setVisibility(View.VISIBLE);
                 }
